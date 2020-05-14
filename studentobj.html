@@ -1,0 +1,37 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function DailySales(date, vanilla, chocolate, strawberry)
+        {
+          this.date_sales = date;
+          this.vanilla_scoops = vanilla;
+          this.chocolate_scoops = chocolate;
+          this.strawberry_scoops = strawberry;
+          this.calculateTotal = function()
+          {
+           var total = this.vanilla_scoops + this.chocolate_scoops + this.strawberry_scoops;
+         	 return (total);
+          }
+		  this.displaySales = function()
+		  {
+            document.write("Date: " + this.date_sales + "<br />");
+            document.write("Vanilla: " + this.vanilla_scoops + "<br />");
+            document.write("Chocolate: " + this.chocolate_scoops + "<br />");
+            document.write("Strawberry: " + this.strawberry_scoops + "<br />");
+            var total = this.calculateTotal();
+            document.write("Total Scoops Sold: " + total + "<br /><br />");
+		  }
+		}
+        var day1 = new DailySales("May 14, 2020", 200, 130, 140);
+        var day2 = new DailySales("May 15, 2020", 150, 166, 230);
+        var day3 = new DailySales("May 16, 2020", 125, 170, 180);
+        var day4 = new DailySales("May 17, 2020", 210, 176, 189);
+        day1.displaySales();
+        day2.displaySales();
+        day3.displaySales();
+        day4.displaySales();
+	</script>
+</head>
+<body>
+</body>
+</html>
